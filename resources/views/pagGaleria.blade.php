@@ -5,6 +5,6 @@
 @endsection
 
 @section('seccion')
-    <h3>Este es el codigo de la foto: </h3>
+    <h3>Este es el codigo de la foto. 7</h3>
 @endsection
   
