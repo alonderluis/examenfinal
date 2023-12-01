@@ -11,12 +11,18 @@ class PagesController extends Controller
         return view('welcome');
     }
 
+    public function fnEstDetalle($id){
+        $xDetAlumnos = Estudiante::findOrFail($id);     //Datos de BD por id
+        return view('Estudiante.pagDetalle', compact('xDetAlumnos'));
+    }
+
     public function fnLista () {
         $xAlumnos = Estudiante::all();   //Datos de BD
         return view('pagLista', compact('xAlumnos'));
     }
 
-    public function fnGaleria ($numero=0) {
+    
+    public function fnGaleria ($numero=null) {
         $valor = $numero;
         $otro = 25;
 
